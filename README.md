@@ -30,19 +30,19 @@ We recommend every repository include a README, LICENSE, and .gitignore
 ### …or create a new repository on the command line
 
 ```cmd
-echo "# _cripto" >> README.md
+echo "# python-cripto" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:corbaz/_cripto.git
+git remote add origin https://github.com/corbaz/python-cripto.git
 git push -u origin main
 ```
 
 …or push an existing repository from the command line
 
 ```cmd
-git remote add origin git@github.com:corbaz/_cripto.git
+git remote add origin https://github.com/corbaz/python-cripto.git
 git branch -M main
 git push -u origin main
 ```
