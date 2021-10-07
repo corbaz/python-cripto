@@ -1,0 +1,2 @@
+cls
+env\Scripts\activate
