@@ -1,3 +1,3 @@
 git add .
 git commit -am "%1%"
-git push heroku master
+git push -u origin main 
