@@ -1,5 +1,53 @@
 [
     {
+        "label": "*",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "print_",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "USERNAME_DB",
+        "importPath": "local_settings",
+        "description": "local_settings",
+        "isExtraImport": true,
+        "detail": "local_settings",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD_DB",
+        "importPath": "local_settings",
+        "description": "local_settings",
+        "isExtraImport": true,
+        "detail": "local_settings",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "kind": 6,
         "isExtraImport": true,
@@ -34,30 +82,6 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "print_",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "__version__",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
         "label": "CockroachDatabase",
         "importPath": "playhouse.cockroachdb",
         "description": "playhouse.cockroachdb",
@@ -89,6 +113,40 @@
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "UserCripto",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "UserCripto",
+        "kind": 6,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "class UserCripto(Model):\n    # username\n    # token\n    stop_limit = IntegerField(null=True)\n    class Meta:\n        database = db\n        table_name = 'user_criptos'\n    def __str__(self):\n        return f'Stop limit {self.stop_limit}'",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "db = MySQLDatabase('cripto',\n                   user=USERNAME_DB,\n                   password=PASSWORD_DB,\n                   host='localhost',\n                   port=3306)\nclass UserCripto(Model):\n    # username\n    # token\n    stop_limit = IntegerField(null=True)\n    class Meta:",
+        "detail": "app.database",
         "documentation": {}
     },
     {
@@ -218,11 +276,29 @@
         "documentation": {}
     },
     {
+        "label": "USERNAME_DB",
+        "kind": 5,
+        "importPath": "local_settings",
+        "description": "local_settings",
+        "peekOfCode": "USERNAME_DB = \"root\"\nPASSWORD_DB = \"jcc123lochasan\"",
+        "detail": "local_settings",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD_DB",
+        "kind": 5,
+        "importPath": "local_settings",
+        "description": "local_settings",
+        "peekOfCode": "PASSWORD_DB = \"jcc123lochasan\"",
+        "detail": "local_settings",
+        "documentation": {}
+    },
+    {
         "label": "send_notification",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def send_notification():\n    print('Notificacion via mail')\ndef get_current_price(symbol, vs_currencies=\"ars\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:\n        payload = response.json()\n        # print(\"precio:\", payload)",
+        "peekOfCode": "def send_notification():\n    print('Notificacion via mail')\n    print('El correo se envío')\ndef get_current_price(symbol, vs_currencies=\"usd\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:\n        payload = response.json()",
         "detail": "main",
         "documentation": {}
     },
@@ -231,7 +307,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_current_price(symbol, vs_currencies=\"ars\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:\n        payload = response.json()\n        # print(\"precio:\", payload)\n        return payload[symbol][vs_currencies]\nif __name__ == '__main__':",
+        "peekOfCode": "def get_current_price(symbol, vs_currencies=\"usd\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:\n        payload = response.json()\n        # print(\"precio:\", payload)\n        return payload[symbol][vs_currencies]\nif __name__ == '__main__':",
         "detail": "main",
         "documentation": {}
     },
@@ -240,7 +316,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "STOP_LIMIT = 50000\ndef send_notification():\n    print('Notificacion via mail')\ndef get_current_price(symbol, vs_currencies=\"ars\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:\n        payload = response.json()",
+        "peekOfCode": "STOP_LIMIT = 50000\napp = create_app()\ndef send_notification():\n    print('Notificacion via mail')\n    print('El correo se envío')\ndef get_current_price(symbol, vs_currencies=\"usd\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = create_app()\ndef send_notification():\n    print('Notificacion via mail')\n    print('El correo se envío')\ndef get_current_price(symbol, vs_currencies=\"usd\"):\n    # end-point api de https://www.coingecko.com/es/api/documentation\n    # se usan f para podes usar placeholder {symbol} y {vs_currencies}\n    response = requests.get(\n        f'https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies={vs_currencies}')\n    if response.status_code == 200:",
         "detail": "main",
         "documentation": {}
     }

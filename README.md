@@ -29,7 +29,7 @@
 
 ---
 
-## Install requests y ORM peewee
+## Instalar requests y ORM peewee
 
 ## DOC de requests
 
@@ -39,7 +39,11 @@
 
 <http://docs.peewee-orm.com/en/latest/>
 
-`pip install requests peewee`
+## DOC de mysqlclient
+
+<https://pypi.org/project/mysqlclient/>
+
+`pip install requests peewee mysqlclient`
 
 ---
 

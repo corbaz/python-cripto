@@ -1,16 +1,19 @@
 import time
-
 import requests
 
+from app import UserCripto
+from app import create_app
 
 STOP_LIMIT = 50000
+app = create_app()
 
 
 def send_notification():
     print('Notificacion via mail')
+    print('El correo se envío')
 
 
-def get_current_price(symbol, vs_currencies="ars"):
+def get_current_price(symbol, vs_currencies="usd"):
 
     # end-point api de https://www.coingecko.com/es/api/documentation
 
@@ -42,7 +45,10 @@ if __name__ == '__main__':
         print("Valor del Dolar: $ ", ars/usd)
         print("Valor del Peso Argentino: $ ", usd/ars)
 
-        if usd >= STOP_LIMIT:
+        for limit in UserCripto.select().where(UserCripto.stop_limit < usd):
             send_notification()
+
+            UserCripto.update(stop_limit=None).where(
+                UserCripto.id == limit.id).execute()
 
         time.sleep(15)

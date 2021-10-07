@@ -2,6 +2,8 @@ autopep8==1.5.7
 certifi==2021.5.30
 charset-normalizer==2.0.6
 idna==3.2
+mysqlclient==2.0.3
+peewee==3.14.4
 pycodestyle==2.7.0
 requests==2.26.0
 toml==0.10.2
