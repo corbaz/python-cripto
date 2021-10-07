@@ -1,33 +1,65 @@
-# Python Cripto
+# Python Cripto <https://www.coingecko.com/es/api/documentation>
 
-md \_cripto
+## Crear directorio del proyecto
 
-cd \_cripto
+- Crear directorio del proyecto: `md _cripto`
+- Ir al directorio `cd _cripto`
 
-crear main.py
+1. crear `main.py`
 
-configurar entorno virtual
-python -m venv env
+2. crear carpeta app
 
-para activar entorno
-env\Scripts\activate
+3. `md app`
 
-instalar requests
-pip install requests
+4. `cd app`
 
-End-point de la api:
+5. crear los siguientes archivos dentro de la carpeta app
+
+   `__init__.py`
+
+   `database.py`
+
+---
+
+## Configurar entorno virtual
+
+- `python -m venv env`
+- para activar entorno
+  `env\Scripts\activate`
+
+---
+
+## Install requests y ORM peewee
+
+## DOC de requests
+
+<https://docs.python-requests.org/en/latest/>
+
+## DOC de peewee
+
+<http://docs.peewee-orm.com/en/latest/>
+
+`pip install requests peewee`
+
+---
+
+## End-point de la api
 
 <https://www.coingecko.com/es/api/documentation>
+
+---
 
 ## Quick setup — if you’ve done this kind of thing before or
 
 ## <https://github.com/corbaz/python-cripto.git>
 
-### Get started by creating a new file or uploading an existing file
+## Get started by creating a new file or uploading an existing file
 
-We recommend every repository include a README, LICENSE, and .gitignore
+We recommend every repository include a:
 
-### …or create a new repository on the command line
+README, LICENSE, and .gitignore
+
+## …or create a new repository on the command line
 
 ```cmd
 echo "# python-cripto" >> README.md
@@ -39,7 +71,7 @@ git remote add origin https://github.com/corbaz/python-cripto.git
 git push -u origin main
 ```
 
-…or push an existing repository from the command line
+## …or push an existing repository from the command line
 
 ```cmd
 git remote add origin https://github.com/corbaz/python-cripto.git
@@ -47,7 +79,7 @@ git branch -M main
 git push -u origin main
 ```
 
-…or import code from another repository
+## …or import code from another repository
 
 You can initialize this repository with code from a
 

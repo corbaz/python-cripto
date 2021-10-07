@@ -1,4 +1,13 @@
+import time
+
 import requests
+
+
+STOP_LIMIT = 50000
+
+
+def send_notification():
+    print('Notificacion via mail')
 
 
 def get_current_price(symbol, vs_currencies="ars"):
@@ -18,15 +27,22 @@ def get_current_price(symbol, vs_currencies="ars"):
 
 
 if __name__ == '__main__':
+
     cripto = 'bitcoin'
-
     dolares = "usd"
-    usd = get_current_price(cripto, dolares)
-    print("Precio del Bitcoin en Dolares: u$s", usd)
-
     pesos_argentinos = "ars"
-    ars = get_current_price(cripto, pesos_argentinos)
-    print("Precio del Bitcoin en Pesos Argentinos: $", ars)
 
-    print("Valor del Dolar: $ ", ars/usd)
-    print("Valor del Peso Argentino: $ ", usd/ars)
+    while True:
+        usd = get_current_price(cripto, dolares)
+        print("Precio del Bitcoin en Dolares: u$s", usd)
+
+        ars = get_current_price(cripto, pesos_argentinos)
+        print("Precio del Bitcoin en Pesos Argentinos: $", ars)
+
+        print("Valor del Dolar: $ ", ars/usd)
+        print("Valor del Peso Argentino: $ ", usd/ars)
+
+        if usd >= STOP_LIMIT:
+            send_notification()
+
+        time.sleep(15)
