@@ -12,18 +12,17 @@ python -m venv env
 instalar requests
 pip install requests
 
-end-point de la api:
+End-point de la api:
 
 <https://www.coingecko.com/es/api/documentation>
 
-Quick setup — if you’ve done this kind of thing before
-or
+## Quick setup — if you’ve done this kind of thing before or
 
-https://github.com/corbaz/python-cripto.git
+## https://github.com/corbaz/python-cripto.git
 
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+### Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore
 
-…or create a new repository on the command line
+### …or create a new repository on the command line
 
 ```cmd
 echo "# python-cripto" >> README.md
